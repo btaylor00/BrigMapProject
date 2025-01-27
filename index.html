@@ -8,8 +8,11 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
         html, body, #map {
             width: 100%;
@@ -26,6 +29,7 @@
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
+        <script src="js/L.Control.Locate.min.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -33,10 +37,28 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
         <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString' || e.target.feature.geometry.type === 'MultiLineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[39.37817050274474,-74.40790086567802],[39.39893574910668,-74.36951395115139]]);
+        }).fitBounds([[39.40529998964106,-74.36908233372256],[39.41021502896644,-74.36166902596362]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -71,6 +93,17 @@
         var zoomControl = L.control.zoom({
             position: 'topleft'
         }).addTo(map);
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'feet',
+            secondaryLengthUnit: 'miles',
+            primaryAreaUnit: 'sqfeet',
+            secondaryAreaUnit: 'sqmiles'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0].innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0].className += ' fas fa-ruler';
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
@@ -87,10 +120,73 @@
         });
         layer_GoogleSatellite_0;
         map.addLayer(layer_GoogleSatellite_0);
-        map.createPane('pane_OpenStreetMap_1');
-        map.getPane('pane_OpenStreetMap_1').style.zIndex = 401;
-        var layer_OpenStreetMap_1 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane_OpenStreetMap_1',
+        map.createPane('pane_1933Overlay_1');
+        map.getPane('pane_1933Overlay_1').style.zIndex = 401;
+        var img_1933Overlay_1 = 'data/1933Overlay_1.png';
+        var img_bounds_1933Overlay_1 = [[39.35101419471855,-74.43722006984548],[39.4520223618934,-74.32601575612775]];
+        var layer_1933Overlay_1 = new L.imageOverlay(img_1933Overlay_1,
+                                              img_bounds_1933Overlay_1,
+                                              {pane: 'pane_1933Overlay_1'});
+        bounds_group.addLayer(layer_1933Overlay_1);
+        map.addLayer(layer_1933Overlay_1);
+        map.createPane('pane_1927_2_modified_2');
+        map.getPane('pane_1927_2_modified_2').style.zIndex = 402;
+        var img_1927_2_modified_2 = 'data/1927_2_modified_2.png';
+        var img_bounds_1927_2_modified_2 = [[39.38760672763641,-74.39501221831189],[39.396308777046926,-74.3838615055556]];
+        var layer_1927_2_modified_2 = new L.imageOverlay(img_1927_2_modified_2,
+                                              img_bounds_1927_2_modified_2,
+                                              {pane: 'pane_1927_2_modified_2'});
+        bounds_group.addLayer(layer_1927_2_modified_2);
+        map.addLayer(layer_1927_2_modified_2);
+        map.createPane('pane_1927_3_modified_3');
+        map.getPane('pane_1927_3_modified_3').style.zIndex = 403;
+        var img_1927_3_modified_3 = 'data/1927_3_modified_3.png';
+        var img_bounds_1927_3_modified_3 = [[39.39036305018174,-74.38920060326122],[39.39944224882254,-74.37812575152752]];
+        var layer_1927_3_modified_3 = new L.imageOverlay(img_1927_3_modified_3,
+                                              img_bounds_1927_3_modified_3,
+                                              {pane: 'pane_1927_3_modified_3'});
+        bounds_group.addLayer(layer_1927_3_modified_3);
+        map.addLayer(layer_1927_3_modified_3);
+        map.createPane('pane_1927_4_modified_4');
+        map.getPane('pane_1927_4_modified_4').style.zIndex = 404;
+        var img_1927_4_modified_4 = 'data/1927_4_modified_4.png';
+        var img_bounds_1927_4_modified_4 = [[39.394395745369415,-74.38404833864604],[39.4029655922921,-74.37293235602442]];
+        var layer_1927_4_modified_4 = new L.imageOverlay(img_1927_4_modified_4,
+                                              img_bounds_1927_4_modified_4,
+                                              {pane: 'pane_1927_4_modified_4'});
+        bounds_group.addLayer(layer_1927_4_modified_4);
+        map.addLayer(layer_1927_4_modified_4);
+        map.createPane('pane_1927_5_modified_5');
+        map.getPane('pane_1927_5_modified_5').style.zIndex = 405;
+        var img_1927_5_modified_5 = 'data/1927_5_modified_5.png';
+        var img_bounds_1927_5_modified_5 = [[39.39724872905558,-74.37820521258115],[39.40615882131926,-74.36711679419234]];
+        var layer_1927_5_modified_5 = new L.imageOverlay(img_1927_5_modified_5,
+                                              img_bounds_1927_5_modified_5,
+                                              {pane: 'pane_1927_5_modified_5'});
+        bounds_group.addLayer(layer_1927_5_modified_5);
+        map.addLayer(layer_1927_5_modified_5);
+        map.createPane('pane_1927_6_1_modified_6');
+        map.getPane('pane_1927_6_1_modified_6').style.zIndex = 406;
+        var img_1927_6_1_modified_6 = 'data/1927_6_1_modified_6.png';
+        var img_bounds_1927_6_1_modified_6 = [[39.40121842136171,-74.37263678936532],[39.40999950039172,-74.36168274120689]];
+        var layer_1927_6_1_modified_6 = new L.imageOverlay(img_1927_6_1_modified_6,
+                                              img_bounds_1927_6_1_modified_6,
+                                              {pane: 'pane_1927_6_1_modified_6'});
+        bounds_group.addLayer(layer_1927_6_1_modified_6);
+        map.addLayer(layer_1927_6_1_modified_6);
+        map.createPane('pane_1927_7_1_modified_7');
+        map.getPane('pane_1927_7_1_modified_7').style.zIndex = 407;
+        var img_1927_7_1_modified_7 = 'data/1927_7_1_modified_7.png';
+        var img_bounds_1927_7_1_modified_7 = [[39.4060516325648,-74.36843363105467],[39.41494690585117,-74.357220093851]];
+        var layer_1927_7_1_modified_7 = new L.imageOverlay(img_1927_7_1_modified_7,
+                                              img_bounds_1927_7_1_modified_7,
+                                              {pane: 'pane_1927_7_1_modified_7'});
+        bounds_group.addLayer(layer_1927_7_1_modified_7);
+        map.addLayer(layer_1927_7_1_modified_7);
+        map.createPane('pane_GoogleRoads_8');
+        map.getPane('pane_GoogleRoads_8').style.zIndex = 408;
+        var layer_GoogleRoads_8 = L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleRoads_8',
             opacity: 1.0,
             attribution: '',
             minZoom: 1,
@@ -98,21 +194,31 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
-        layer_OpenStreetMap_1;
-        map.addLayer(layer_OpenStreetMap_1);
-        map.createPane('pane_1933_Overlay_2');
-        map.getPane('pane_1933_Overlay_2').style.zIndex = 402;
-        var img_1933_Overlay_2 = 'data/1933_Overlay_2.png';
-        var img_bounds_1933_Overlay_2 = [[39.35101419471855,-74.43722006984548],[39.4520223618934,-74.32601575612775]];
-        var layer_1933_Overlay_2 = new L.imageOverlay(img_1933_Overlay_2,
-                                              img_bounds_1933_Overlay_2,
-                                              {pane: 'pane_1933_Overlay_2'});
-        bounds_group.addLayer(layer_1933_Overlay_2);
-        map.addLayer(layer_1933_Overlay_2);
+        layer_GoogleRoads_8;
+        map.addLayer(layer_GoogleRoads_8);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
         var overlaysTree = [
-            {label: "1933_Overlay", layer: layer_1933_Overlay_2},
+        {label: '<b>Top Layers</b>', selectAllCheckbox: true, children: [
+            {label: "Google Roads", layer: layer_GoogleRoads_8},]},
+        {label: '<b>1927</b>', selectAllCheckbox: true, children: [
+            {label: "1927_7_1_modified", layer: layer_1927_7_1_modified_7},
+            {label: "1927_6_1_modified", layer: layer_1927_6_1_modified_6},
+            {label: "1927_5_modified", layer: layer_1927_5_modified_5},
+            {label: "1927_4_modified", layer: layer_1927_4_modified_4},
+            {label: "1927_3_modified", layer: layer_1927_3_modified_3},
+            {label: "1927_2_modified", layer: layer_1927_2_modified_2},]},
+        {label: '<b>Map Overlays</b>', selectAllCheckbox: true, children: [
+            {label: "1933 Overlay", layer: layer_1933Overlay_1},]},
         {label: '<b>Base Maps</b>', selectAllCheckbox: true, children: [
-            {label: "OpenStreetMap", layer: layer_OpenStreetMap_1},
             {label: "Google Satellite", layer: layer_GoogleSatellite_0},]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
