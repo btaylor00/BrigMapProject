@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="smithhotel" id="smithhotel">
+	<SimpleField name="fid" type="float"></SimpleField>
+</Schema>
+<Folder><name>smithhotel</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3699249575206,39.4067571172408 -74.3698438185433,39.4068266016571 -74.3696484088396,39.406700693754 -74.3695787645508,39.4067607743171 -74.369603106244,39.4067769699382 -74.3695483374343,39.406827646535 -74.3695652413879,39.4068370504355 -74.3694793693036,39.4069159386621 -74.3694022872751,39.4068710089546 -74.3694874832013,39.4067936879949 -74.3694732838803,39.4067858514063 -74.369420543545,39.4068328709243 -74.369345489991,39.4067900309203 -74.36939687801,39.4067414440546 -74.3693657747353,39.406723681106 -74.3695922877137,39.4065371698726 -74.3699242813625,39.4067586845592 -74.3699242813625,39.4067586845592 -74.3699249575206,39.4067571172408</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3695571274902,39.406974974164 -74.3695223053457,39.4070068428654 -74.3694678746151,39.4069736680693 -74.3695033729177,39.4069412769146 -74.3695567894111,39.4069744517261 -74.3695567894111,39.4069744517261 -74.3695571274902,39.406974974164</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">3</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3695081060247,39.407019381367 -74.3694736219593,39.4070515112668 -74.3694300097591,39.4070246057419 -74.3694631415081,39.4069935207051 -74.3695070917875,39.4070199038045 -74.3695070917875,39.4070199038045 -74.3695081060247,39.407019381367</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">4</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3694320382335,39.4069352688762 -74.3693708459214,39.4069898636411 -74.3693319668281,39.4069676600337 -74.3693931591402,39.4069135876897 -74.3694303478381,39.4069350076571 -74.3694303478381,39.4069350076571 -74.3694320382335,39.4069352688762</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">5</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3693049205024,39.4070481154244 -74.369270436437,39.4070786779998 -74.3692217530506,39.4070502051736 -74.3692569132741,39.4070206874607 -74.3693042443442,39.4070478542058 -74.3693049205024,39.4070481154244</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#smithhotel">
+		<SimpleData name="fid">6</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3696991207005,39.4081339928994 -74.3696463803652,39.4080775705267 -74.3695868784485,39.4081162303055 -74.3696774836399,39.4081987740858 -74.3698870926646,39.4080775705267 -74.3698546370737,39.4080451798847 -74.3696977683842,39.4081329480411 -74.3696991207005,39.4081339928994</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
