@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="fedullos_pier_and_motel" id="fedullos_pier_and_motel">
+	<SimpleField name="fid" type="float"></SimpleField>
+</Schema>
+<Folder><name>fedullos_pier_and_motel</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#fedullos_pier_and_motel">
+		<SimpleData name="fid">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3920454150181,39.3867069987887 -74.3912116994009,39.3861030774188 -74.3912587067708,39.3860681169979 -74.3911828741269,39.3860125915896 -74.3910640253049,39.3860993071782 -74.3911425187433,39.3861572317618 -74.3911833175927,39.3861253561093 -74.3920196940044,39.3867303055246 -74.3920454150181,39.3867069987887</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#fedullos_pier_and_motel">
+		<SimpleData name="fid">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-74.3920560581962,39.3866974018952 -74.3920001815112,39.3867488138093 -74.3920560581962,39.3867947417538 -74.3918999582508,39.3869222430534 -74.3923092771416,39.3872056926886 -74.3925327838816,39.387015126918 -74.3920560581962,39.3866974018952</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#fedullos_pier_and_motel">
+		<SimpleData name="fid">3</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#fedullos_pier_and_motel">
+		<SimpleData name="fid">4</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#fedullos_pier_and_motel">
+		<SimpleData name="fid">5</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
