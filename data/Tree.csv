@@ -1,4 +1,4 @@
 ﻿ID,Type,URL,Name,Parent,N,E,W,S
 SmithHotelBuilding.kml,kml,https://raw.githubusercontent.com/btaylor00/BrigMapProject/refs/heads/main/data/Past/SmithHotelBuilding.kml,Smith Hotel,Past Buildings,,,,
 fedullos_pier_and_motel.kml,kml,https://raw.githubusercontent.com/btaylor00/BrigMapProject/refs/heads/main/data/Past/fedullos_pier_and_motel.kml,Fedullos Pier and Motel,Past Buildings,,,,
-1920Overlay,Overlay,,1920 Overlay,Overlay,39.45470486,-74.32594902,-74.45423881,39.33638725
+1920Overlay,Overlay,https://github.com/btaylor00/BrigMapProject/blob/main/data/Overlay/1920Overlay_modified.png?raw=true,1920 Overlay,Overlay,39.45470486,-74.32594902,-74.45423881,39.33638725
