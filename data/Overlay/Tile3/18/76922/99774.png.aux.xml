@@ -1,0 +1,35 @@
+<PAMDataset>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">3</MDI>
+      <MDI key="STATISTICS_MAXIMUM">153</MDI>
+      <MDI key="STATISTICS_MEAN">83.662790697674</MDI>
+      <MDI key="STATISTICS_STDDEV">36.086246087589</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">8.661</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">3</MDI>
+      <MDI key="STATISTICS_MAXIMUM">153</MDI>
+      <MDI key="STATISTICS_MEAN">83.668076109937</MDI>
+      <MDI key="STATISTICS_STDDEV">36.091172075668</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">8.661</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">3</MDI>
+      <MDI key="STATISTICS_MAXIMUM">153</MDI>
+      <MDI key="STATISTICS_MEAN">83.665609584214</MDI>
+      <MDI key="STATISTICS_STDDEV">36.089953309942</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">8.661</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
